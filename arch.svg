@@ -1,0 +1,138 @@
+<!-- filepath: /Users/rahulsingh/Downloads/optimized-multi-region-architecture.svg -->
+<svg width="1200" height="900" viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <!-- User -->
+  <circle cx="600" cy="40" r="18" fill="#fffde7" stroke="#fbc02d" stroke-width="2"/>
+  <text x="600" y="45" text-anchor="middle" font-size="14" fill="#fbc02d">User</text>
+  <!-- Global Traffic Manager -->
+  <rect x="500" y="80" width="200" height="60" rx="12" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <text x="600" y="110" text-anchor="middle" font-size="18" fill="#1976d2">Global Traffic Manager</text>
+  <text x="600" y="130" text-anchor="middle" font-size="13" fill="#1976d2">(DNS/Geo-aware)</text>
+  <!-- Arrow: User to GTM -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#1976d2"/>
+    </marker>
+    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#388e3c"/>
+    </marker>
+    <marker id="arrow3" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#8e24aa"/>
+    </marker>
+    <marker id="arrow4" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#fbc02d"/>
+    </marker>
+  </defs>
+  <line x1="600" y1="58" x2="600" y2="80" stroke="#1976d2" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Arrows: GTM to Zones -->
+  <line x1="600" y1="140" x2="250" y2="200" stroke="#1976d2" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="600" y1="140" x2="950" y2="200" stroke="#1976d2" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Zone 1 -->
+  <rect x="80" y="180" width="400" height="520" rx="24" fill="#f1f8e9" stroke="#388e3c" stroke-width="2"/>
+  <text x="280" y="210" text-anchor="middle" font-size="18" fill="#388e3c">Zone 1</text>
+  <!-- Nginx/Ingress 1A -->
+  <rect x="140" y="230" width="280" height="40" rx="8" fill="#fff" stroke="#388e3c" stroke-width="2"/>
+  <text x="280" y="255" text-anchor="middle" font-size="15" fill="#388e3c">Nginx/Ingress 1A (HA)</text>
+  <!-- Gateways 1A/1B -->
+  <rect x="120" y="290" width="100" height="40" rx="8" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"/>
+  <text x="170" y="315" text-anchor="middle" font-size="13" fill="#1976d2">Gateway 1A</text>
+  <rect x="340" y="290" width="100" height="40" rx="8" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"/>
+  <text x="390" y="315" text-anchor="middle" font-size="13" fill="#1976d2">Gateway 1B</text>
+  <!-- Cluster 1A -->
+  <rect x="100" y="350" width="140" height="180" rx="12" fill="#fffde7" stroke="#fbc02d" stroke-width="1.5"/>
+  <text x="170" y="370" text-anchor="middle" font-size="13" fill="#fbc02d">Cluster 1A</text>
+  <!-- Applications in Cluster 1A -->
+  <rect x="115" y="385" width="110" height="28" rx="6" fill="#e1f5fe" stroke="#0288d1" stroke-width="1"/>
+  <text x="170" y="405" text-anchor="middle" font-size="12" fill="#0288d1">Auth Service</text>
+  <rect x="115" y="420" width="110" height="28" rx="6" fill="#fce4ec" stroke="#d81b60" stroke-width="1"/>
+  <text x="170" y="440" text-anchor="middle" font-size="12" fill="#d81b60">Product Service</text>
+  <rect x="115" y="455" width="110" height="28" rx="6" fill="#e8f5e9" stroke="#388e3c" stroke-width="1"/>
+  <text x="170" y="475" text-anchor="middle" font-size="12" fill="#388e3c">Order Service</text>
+  <rect x="115" y="490" width="110" height="28" rx="6" fill="#fff3e0" stroke="#fbc02d" stroke-width="1"/>
+  <text x="170" y="510" text-anchor="middle" font-size="12" fill="#fbc02d">Inventory Service</text>
+  <!-- Cluster 1B -->
+  <rect x="320" y="350" width="140" height="180" rx="12" fill="#fffde7" stroke="#fbc02d" stroke-width="1.5"/>
+  <text x="390" y="370" text-anchor="middle" font-size="13" fill="#fbc02d">Cluster 1B</text>
+  <!-- Applications in Cluster 1B -->
+  <rect x="335" y="385" width="110" height="28" rx="6" fill="#e1f5fe" stroke="#0288d1" stroke-width="1"/>
+  <text x="390" y="405" text-anchor="middle" font-size="12" fill="#0288d1">Auth Service</text>
+  <rect x="335" y="420" width="110" height="28" rx="6" fill="#fce4ec" stroke="#d81b60" stroke-width="1"/>
+  <text x="390" y="440" text-anchor="middle" font-size="12" fill="#d81b60">Product Service</text>
+  <rect x="335" y="455" width="110" height="28" rx="6" fill="#e8f5e9" stroke="#388e3c" stroke-width="1"/>
+  <text x="390" y="475" text-anchor="middle" font-size="12" fill="#388e3c">Order Service</text>
+  <rect x="335" y="490" width="110" height="28" rx="6" fill="#fff3e0" stroke="#fbc02d" stroke-width="1"/>
+  <text x="390" y="510" text-anchor="middle" font-size="12" fill="#fbc02d">Inventory Service</text>
+  <!-- DB 1A/1B -->
+  <ellipse cx="170" cy="570" rx="45" ry="20" fill="#e1bee7" stroke="#8e24aa" stroke-width="1.5"/>
+  <text x="170" y="575" text-anchor="middle" font-size="12" fill="#8e24aa">DB 1A</text>
+  <ellipse cx="390" cy="570" rx="45" ry="20" fill="#e1bee7" stroke="#8e24aa" stroke-width="1.5"/>
+  <text x="390" y="575" text-anchor="middle" font-size="12" fill="#8e24aa">DB 1B</text>
+  <!-- Zone 2 -->
+  <rect x="720" y="180" width="400" height="520" rx="24" fill="#f1f8e9" stroke="#388e3c" stroke-width="2"/>
+  <text x="920" y="210" text-anchor="middle" font-size="18" fill="#388e3c">Zone 2</text>
+  <!-- Nginx/Ingress 2A -->
+  <rect x="780" y="230" width="280" height="40" rx="8" fill="#fff" stroke="#388e3c" stroke-width="2"/>
+  <text x="920" y="255" text-anchor="middle" font-size="15" fill="#388e3c">Nginx/Ingress 2A (HA)</text>
+  <!-- Gateways 2A/2B -->
+  <rect x="760" y="290" width="100" height="40" rx="8" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"/>
+  <text x="810" y="315" text-anchor="middle" font-size="13" fill="#1976d2">Gateway 2A</text>
+  <rect x="980" y="290" width="100" height="40" rx="8" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"/>
+  <text x="1030" y="315" text-anchor="middle" font-size="13" fill="#1976d2">Gateway 2B</text>
+  <!-- Cluster 2A -->
+  <rect x="740" y="350" width="140" height="180" rx="12" fill="#fffde7" stroke="#fbc02d" stroke-width="1.5"/>
+  <text x="810" y="370" text-anchor="middle" font-size="13" fill="#fbc02d">Cluster 2A</text>
+  <!-- Applications in Cluster 2A -->
+  <rect x="755" y="385" width="110" height="28" rx="6" fill="#e1f5fe" stroke="#0288d1" stroke-width="1"/>
+  <text x="810" y="405" text-anchor="middle" font-size="12" fill="#0288d1">Auth Service</text>
+  <rect x="755" y="420" width="110" height="28" rx="6" fill="#fce4ec" stroke="#d81b60" stroke-width="1"/>
+  <text x="810" y="440" text-anchor="middle" font-size="12" fill="#d81b60">Product Service</text>
+  <rect x="755" y="455" width="110" height="28" rx="6" fill="#e8f5e9" stroke="#388e3c" stroke-width="1"/>
+  <text x="810" y="475" text-anchor="middle" font-size="12" fill="#388e3c">Order Service</text>
+  <rect x="755" y="490" width="110" height="28" rx="6" fill="#fff3e0" stroke="#fbc02d" stroke-width="1"/>
+  <text x="810" y="510" text-anchor="middle" font-size="12" fill="#fbc02d">Inventory Service</text>
+  <!-- Cluster 2B -->
+  <rect x="960" y="350" width="140" height="180" rx="12" fill="#fffde7" stroke="#fbc02d" stroke-width="1.5"/>
+  <text x="1030" y="370" text-anchor="middle" font-size="13" fill="#fbc02d">Cluster 2B</text>
+  <!-- Applications in Cluster 2B -->
+  <rect x="975" y="385" width="110" height="28" rx="6" fill="#e1f5fe" stroke="#0288d1" stroke-width="1"/>
+  <text x="1030" y="405" text-anchor="middle" font-size="12" fill="#0288d1">Auth Service</text>
+  <rect x="975" y="420" width="110" height="28" rx="6" fill="#fce4ec" stroke="#d81b60" stroke-width="1"/>
+  <text x="1030" y="440" text-anchor="middle" font-size="12" fill="#d81b60">Product Service</text>
+  <rect x="975" y="455" width="110" height="28" rx="6" fill="#e8f5e9" stroke="#388e3c" stroke-width="1"/>
+  <text x="1030" y="475" text-anchor="middle" font-size="12" fill="#388e3c">Order Service</text>
+  <rect x="975" y="490" width="110" height="28" rx="6" fill="#fff3e0" stroke="#fbc02d" stroke-width="1"/>
+  <text x="1030" y="510" text-anchor="middle" font-size="12" fill="#fbc02d">Inventory Service</text>
+  <!-- DB 2A/2B -->
+  <ellipse cx="810" cy="570" rx="45" ry="20" fill="#e1bee7" stroke="#8e24aa" stroke-width="1.5"/>
+  <text x="810" y="575" text-anchor="middle" font-size="12" fill="#8e24aa">DB 2A</text>
+  <ellipse cx="1030" cy="570" rx="45" ry="20" fill="#e1bee7" stroke="#8e24aa" stroke-width="1.5"/>
+  <text x="1030" y="575" text-anchor="middle" font-size="12" fill="#8e24aa">DB 2B</text>
+  <!-- Distributed DB Layer -->
+  <ellipse cx="600" cy="780" rx="180" ry="38" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <text x="600" y="785" text-anchor="middle" font-size="18" fill="#1976d2">Distributed DB (Multi-Region Write)</text>
+  <!-- Observability/Failover -->
+  <rect x="500" y="670" width="200" height="60" rx="12" fill="#fffde7" stroke="#fbc02d" stroke-width="2"/>
+  <text x="600" y="700" text-anchor="middle" font-size="15" fill="#fbc02d">Monitoring &amp; Automated Failover</text>
+  <!-- Connections: Zone 1 -->
+  <line x1="280" y1="270" x2="170" y2="290" stroke="#1976d2" stroke-width="2" marker-end="url(#arrow2)"/>
+  <line x1="280" y1="270" x2="390" y2="290" stroke="#1976d2" stroke-width="2" marker-end="url(#arrow2)"/>
+  <line x1="170" y1="330" x2="170" y2="350" stroke="#fbc02d" stroke-width="2" marker-end="url(#arrow2)"/>
+  <line x1="390" y1="330" x2="390" y2="350" stroke="#fbc02d" stroke-width="2" marker-end="url(#arrow2)"/>
+  <line x1="170" y1="530" x2="170" y2="550" stroke="#8e24aa" stroke-width="2" marker-end="url(#arrow3)"/>
+  <line x1="390" y1="530" x2="390" y2="550" stroke="#8e24aa" stroke-width="2" marker-end="url(#arrow3)"/>
+  <!-- Connections: Zone 2 -->
+  <line x1="920" y1="270" x2="810" y2="290" stroke="#1976d2" stroke-width="2" marker-end="url(#arrow2)"/>
+  <line x1="920" y1="270" x2="1030" y2="290" stroke="#1976d2" stroke-width="2" marker-end="url(#arrow2)"/>
+  <line x1="810" y1="330" x2="810" y2="350" stroke="#fbc02d" stroke-width="2" marker-end="url(#arrow2)"/>
+  <line x1="1030" y1="330" x2="1030" y2="350" stroke="#fbc02d" stroke-width="2" marker-end="url(#arrow2)"/>
+  <line x1="810" y1="530" x2="810" y2="550" stroke="#8e24aa" stroke-width="2" marker-end="url(#arrow3)"/>
+  <line x1="1030" y1="530" x2="1030" y2="550" stroke="#8e24aa" stroke-width="2" marker-end="url(#arrow3)"/>
+  <!-- DBs to Distributed DB -->
+  <line x1="170" y1="590" x2="600" y2="742" stroke="#1976d2" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="390" y1="590" x2="600" y2="742" stroke="#1976d2" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="810" y1="590" x2="600" y2="742" stroke="#1976d2" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1030" y1="590" x2="600" y2="742" stroke="#1976d2" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Monitoring to GTM and Nginx -->
+  <line x1="600" y1="670" x2="600" y2="140" stroke="#fbc02d" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow4)"/>
+  <line x1="600" y1="670" x2="280" y2="270" stroke="#fbc02d" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow4)"/>
+  <line x1="600" y1="670" x2="920" y2="270" stroke="#fbc02d" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow4)"/>
+</svg>
