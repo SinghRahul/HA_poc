@@ -8,6 +8,7 @@ This document describes a high-availability architecture for an automobile compa
 - The company manages multiple products (referred to as "entities"), such as wheels, gears, shafts, motors, etc.
 
 ## Architecture Overview
+![Multi-Region Architecture](arch.svg)
 
 - **Geographical Zones:**  
   - Zone 1  
