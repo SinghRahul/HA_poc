@@ -59,5 +59,5 @@ Automated failover can be implemented using a monitoring tool that:
 - Continuously checks Nginx logs for API names, response codes, and response times.
 - Detects failures and automatically updates Nginx configurations to redirect traffic to healthy clusters or zones.
 
-**Features:**  
+## Features
 This architecture ensures high availability, fault tolerance, and minimal downtime for critical services by leveraging geo-distributed clusters, robust load balancing, and automated failover mechanisms.
